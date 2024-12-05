@@ -1,11 +1,16 @@
 Package: DFEAT
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Extract 19 Yearly Drought Features from Daily Simulated Soil Moisture Time Series
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: person("Georgie", "Elias", , "georgieelias98@gmail.com", role = c("aut", "cre"))
+Maintainer: Georgie ELIAS <georgieelias98@gmail.com>
+Description: DFEAT is an innovative and fully automated tool designed to characterize and extract annual drought features over consecutive hydrological years,
+    using any simulated or observed soil water content time series. This tool, standardized for use through the widely recognized Keetch-Byram Drought Index (KBDI) as a daily
+    soil water balance metric, calculates 19 annual drought features related to the duration, severity, onset, offset, drying and wetting rates,
+    driest peak day, and rainfall pulses. These features are assessed across three soil desiccation thresholds, representing soil moisture loss and recovery at 25%, 50%, and 75%
+    of total available water content under Mediterranean climatic conditions. The DFEAT package covers all aspects of drought analysis, from daily climate data pre-processing to KBDI calculation
+    and drought feature extraction, providing users with a comprehensive set of functions that work sequentially to produce a final table of extracted drought features for the user’s region of interest. 
+    The 'DFEAT' package requires only daily climate data as input, specifically daily precipitation 'prec' and maximum temperature 'Tmax', structure in a data frame with three aditional columns; 'year', 'month', and 'day'
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
