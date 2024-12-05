@@ -36,9 +36,56 @@ devtools::install_github('https://github.com/eliasGeorgie/DFEAT.git')
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a simple example demonstrating the step-by-step implementation of functions within the DFEAT package:
+
+
 
 ``` r
 library(DFEAT)
-## basic example code
+data("tab_clim")
+head(tab_clim)
+
+# First verifies that all columns are named consistently as specified
+check_columns_names(tab_clim)
+
+# Check if each year has 365 or 366 (leap year) days, if it start or no on January 1st, and if years are in chornological order
+check_years_days_and_start(tab_clim)
+
+# Check for missing values in the input climate table
+check_missing_values(tab_clim)
+
+# Calculate KBDI
+result_kbdi <- calculate_KBDI(tab_clim)
+# View the result
+head(result_kbdi)
+
+# Identify Peak Drought Intensity Day (DOY) and its Maximum KBDI Value for Each Year
+# Assuming `result_kbdi` is the output of the `calculate_KBDI` function
+peak_drought_info <- identify_peak_drought_days(result_kbdi)
+head(peak_drought_info)
+
+# Identify Minimum KBDI Value and Corresponding Day Since Beginning Between Two Consecutive Peak Drought Days (Peak.KBDI.DOY)
+min_kbdi_between_drought_peaks <- identify_min_kbdi_between_two_drought_peaks(result_kbdi, peak_drought_info)
+
+# Initialize Empty Drought Features Table
+drought_features_table  <- initialize_drought_features_table(result_kbdi)
+View(drought_features_table)
+
+
+# Yearly Drought Features Extraction
+DF <- Drought_features_extraction (kbdi_data = result_kbdi,
+                                   minDmax = min_kbdi_between_drought_peaks,
+                                   drought_features_table = drought_features_table,
+                                   save_to_csv = F,
+                                   plot_features_extraction = T)
+
+View(DF)
+
+# Multi-Year Drought (MYD) Missing Drought Features Characterization
+MYD_features_calculation <- MYD_characterization(kbdi_data = result_kbdi,
+                                                 minDmax = min_kbdi_between_drought_peaks,
+                                                 drought_features_data = DF,
+                                                 save_to_csv = FALSE)
+View(MYD_features_calculation)
+
 ```
