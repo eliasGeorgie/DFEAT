@@ -31,7 +31,7 @@ may require adjustments to the defined methodological approach to ensure accurac
 You can install the development version of DFEAT from [GitHub](https://github.com/eliasGeorgie/DFEAT.git) with:
 
 ``` r
-install_github('https://github.com/eliasGeorgie/DFEAT.git')
+devtools::install_github('https://github.com/eliasGeorgie/DFEAT.git')
 ```
 
 ## Example
