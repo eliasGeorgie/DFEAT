@@ -1,0 +1,12 @@
+bibentry(
+  bibtype  = "Article",
+  title    = DFEAT: A multifaceted yearly Drought FEature Assessment Tool from daily
+soil water content,
+  author   = Georgie Elias, Ghaleb Faour, Florent Mouillot,
+  journal  = Journal of Hydrology,
+  year     = 2024,
+  volume   = ,
+  number   = ,
+  pages    = ,
+  doi      = 10.1016/j.jhydrol.2024.131700
+)
