@@ -1,0 +1,16 @@
+citHeader("To cite package ‘DFEAT’ in publications use:")
+
+citation <- bibentry(
+  bibtype = "Manual",
+  title = "DFEAT: A multifaceted yearly Drought FEature Assessment Tool from daily
+soil water content, https://doi.org/10.1016/j.jhydrol.2024.131700",
+  author = c(
+    person("Georgie", "Elias"),
+    person("Ghaleb", "Faour"),
+    person("Florent", "Mouillot")
+  ),
+  year = "2024",
+  note = "R package version 1.0.0",
+  url = "https://github.com/eliasGeorgie/DFEAT.git"
+)
+
