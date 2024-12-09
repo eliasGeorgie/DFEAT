@@ -24,7 +24,9 @@ The package has been developed using the Mediterranean-calibrated version of the
 yielding reliable results. However, it should be noted that applying this package outside of Mediterranean conditions
 may require adjustments to the defined methodological approach to ensure accuracy and relevance in differing climates.
 
-
+The following example, which begins calculations using the 'tab_clim' dataset, illustrates a typical Mediterranean soil moisture desiccation pattern.
+This pattern exceeds the three defined soil desiccation thresholds and subsequently recovers to field capacity, a scenario characteristic of sub-humid and humid conditions.
+For Multi-Year Drought (MYD) analysis, users should instead run the example with the 'MYD_tab_clim' dataset.
 
 ## Installation
 
