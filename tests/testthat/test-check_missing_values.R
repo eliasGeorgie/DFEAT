@@ -1,4 +1,3 @@
-# Alternatively, you can capture all messages in a single call
 test_that("check_missing_values", {
   expect_message(
     check_missing_values(tab_clim),

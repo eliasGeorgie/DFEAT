@@ -1,6 +1,4 @@
 
-
-# Alternatively, you can capture all messages in a single call
 test_that("check_years_days_and_start", {
   expect_message(
     check_years_days_and_start(tab_clim),
