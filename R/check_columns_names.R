@@ -49,9 +49,9 @@ check_columns_names <- function(data, required_cols = c('year', 'month', 'day', 
 
   # Final check and print outcome
   if (length(missing_cols) == 0) {
-    print("Dataset has the correct columns")
+    message("Dataset has the correct columns")
   } else {
-    print("Dataset is missing some required columns")
+    message("Dataset is missing some required columns")
   }
 }
 
