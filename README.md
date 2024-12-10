@@ -29,7 +29,7 @@ This pattern exceeds the three defined soil desiccation thresholds and subsequen
 For Multi-Year Drought (MYD) analysis, users should instead run the example with the `MYD_tab_clim`dataset.
 
 ## License
-This software is licensed under a proprietary license. Please refer to the `LICENSE` file for detailed terms and conditions.
+This package is licensed under a proprietary license. Please refer to the `LICENSE` file for detailed terms and conditions.
 
 ## Installation
 
