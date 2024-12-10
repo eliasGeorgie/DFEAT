@@ -14,8 +14,8 @@ These features are assessed across three soil desiccation thresholds, which repr
 
 
 The package contains nine user-friendly functions, each clearly described and documented, intended for sequential implementation.
-It requires a single input table, a daily climate dataset with columns for 'year', 'month', 'day',
-daily precipitation ('prec'), and daily maximum temperature ('Tmax'). When the climate data is loaded,
+It requires a single input table, a daily climate dataset with columns for `year`, `month`, `day`,
+daily precipitation `prec`, and daily maximum temperature `Tmax`. When the climate data is loaded,
 the initial set of functions verifies the variable names in the specified columns, allowing for additional columns if present but notifying the user.
 These functions also ensure that the dataset contains complete years in correct chronological order without any missing values. Once verified,
 the subsequent functions, including KBDI calculation and related features extraction functions, can be implemented sequentially.
@@ -24,9 +24,9 @@ The package has been developed using the Mediterranean-calibrated version of the
 yielding reliable results. However, it should be noted that applying this package outside of Mediterranean conditions
 may require adjustments to the defined methodological approach to ensure accuracy and relevance in differing climates.
 
-The following example, which begins calculations using the 'tab_clim' dataset, illustrates a typical Mediterranean soil moisture desiccation pattern.
+The following example, which begins calculations using the `tab_clim`dataset, illustrates a typical Mediterranean soil moisture desiccation pattern.
 This pattern exceeds the three defined soil desiccation thresholds and subsequently recovers to field capacity, a scenario characteristic of sub-humid and humid conditions.
-For Multi-Year Drought (MYD) analysis, users should instead run the example with the 'MYD_tab_clim' dataset.
+For Multi-Year Drought (MYD) analysis, users should instead run the example with the `MYD_tab_clim`dataset.
 
 ## License
 This software is licensed under a proprietary license. Please refer to the `LICENSE` file for detailed terms and conditions.
