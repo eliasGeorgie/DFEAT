@@ -17,10 +17,6 @@
 #' # Assuming 'tab_clim' is a dataset with 'year', 'month', and 'day' columns
 #' check_years_days_and_start(tab_clim)
 #'
-#' # Example where some years might have fewer than 365 days or don't start on January 1st
-#' check_years_days_and_start(custom_data)
-#'
-
 
 check_years_days_and_start <- function(data) {
 

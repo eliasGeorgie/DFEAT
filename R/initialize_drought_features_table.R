@@ -1,6 +1,4 @@
 
-# The seventh function
-
 #' @title Initialize Empty Drought Features Table
 #' @description Creates an empty table for storing extracted drought features from daily calculated KBDI data for the considered years.
 #' Users should ensure that the input data frame for this function contains all years fully represented and arranged in chronological order.

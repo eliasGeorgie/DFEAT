@@ -42,7 +42,7 @@ result_kbdi <- calculate_KBDI(tab_clim)
 peak_drought_info <- identify_peak_drought_days(result_kbdi)
 
 # Identify Minimum KBDI day and corresponding value Between Two Consecutive Peak Drought Days (Peak.KBDI.DOY)
-min_kbdi_between_drought_peaks <- identify_min_kbdi_between_two_drought_peaks(result_kbdi, peak_drought_data)
+min_kbdi_between_drought_peaks <- identify_min_kbdi_between_two_drought_peaks(result_kbdi, peak_drought_info)
 
 # Initialize an empty table to store the extracted drought features
 drought_features_table  <- initialize_drought_features_table(result_kbdi)
