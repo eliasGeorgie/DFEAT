@@ -28,6 +28,9 @@ The following example, which begins calculations using the 'tab_clim' dataset, i
 This pattern exceeds the three defined soil desiccation thresholds and subsequently recovers to field capacity, a scenario characteristic of sub-humid and humid conditions.
 For Multi-Year Drought (MYD) analysis, users should instead run the example with the 'MYD_tab_clim' dataset.
 
+## License
+This software is licensed under a proprietary license. Please refer to the `LICENSE` file for detailed terms and conditions.
+
 ## Installation
 
 You can install the development version of DFEAT from [GitHub](https://github.com/eliasGeorgie/DFEAT.git) with:
