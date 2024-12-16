@@ -11,7 +11,7 @@ Description: DFEAT is an innovative and fully automated tool designed to charact
     of total available water content under Mediterranean climatic conditions. The DFEAT package covers all aspects of drought analysis, from daily climate data pre-processing to KBDI calculation
     and drought feature extraction, providing users with a comprehensive set of functions that work sequentially to produce a final table of extracted drought features for the user’s region of interest. 
     The 'DFEAT' package requires only daily climate data as input, specifically daily precipitation 'prec' and maximum temperature 'Tmax', structure in a data frame with three aditional columns; 'year', 'month', and 'day'
-License: What license is it under?
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/eliasGeorgie/DFEAT

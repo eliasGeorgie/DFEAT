@@ -10,7 +10,10 @@ hardly yet conceptualized and standardized in a single tool for intercomparison 
 We describe here the application of a new tool, DFEAT, to compute a diverse set of drought features,
 utilizing a daily soil water content time series standardized here using the empirical Keetch-Byram Drought Index (KBDI).
 More particularly, the extracted and characterized features are related to the duration, severity, onset, offset, drying and wetting rates, driest peak day, and rainfall pulses of each drought event.
-These features are assessed across three soil desiccation thresholds, which represent varying levels of drought propagation in soil moisture, selected for their potential impact on agro-ecosystems.
+These features are assessed across three soil desiccation thresholds, which represent varying levels of drought propagation in soil moisture, selected for their potential impact on agro-ecosystems:
+1 - low drought level (i.e., when soil loses 25% of the total available water)
+2 - Moderate drought level (i.e., when soil loses 50% of the total available water)
+3 - Extreme drought level (i.e., when soil loses 75% of the total available water)
 
 
 The package contains nine user-friendly functions, each clearly described and documented, intended for sequential implementation.
