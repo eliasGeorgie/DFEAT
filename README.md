@@ -39,7 +39,7 @@ This package is licensed under a proprietary license. Please refer to the `LICEN
 You can install the development version of DFEAT from [GitHub](https://github.com/eliasGeorgie/DFEAT.git) with:
 
 ``` r
-devtools::install_github('https://github.com/eliasGeorgie/DFEAT.git')
+devtools::install_github('https://github.com/eliasGeorgie/DFEAT.git', dependencies = TRUE)
 ```
 
 ## Example
