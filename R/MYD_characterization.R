@@ -55,7 +55,7 @@ MYD_characterization <- function (kbdi_data, minDmax, drought_features_data, sav
   }
 
   # Calculate the number of years
-  number_of_years <- floor(nrow(kbdi_data) / 365.25)
+  number_of_years <- length(unique(kbdi_data$year))
 
   # Check if the number of rows in the drought_features_table matches the number of years
   if (nrow(drought_features_table) != number_of_years-1 ) {
