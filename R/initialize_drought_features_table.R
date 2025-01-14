@@ -17,7 +17,7 @@ initialize_drought_features_table <- function(kbdi_data) {
 
 
   # Calculate the number of years in the dataset and exclude the last year due to calculation requirement
-  number_of_years <- floor(nrow(kbdi_data) / 365.25) - 1
+  number_of_years <- length(unique(kbdi_data$year)) - 1
 
   # Determine the start year from the first entry in the 'year' column of KBDI data
   start_year <- kbdi_data$year[1]
