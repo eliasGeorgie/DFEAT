@@ -56,7 +56,7 @@ Drought_features_extraction <- function(kbdi_data, minDmax, drought_features_tab
   }
 
   # Calculate the number of years in the dataset and exclude the last year as we cannot characterize it due to lack of sufficient KBDI data on its subsequent year
-  number_of_years <- floor(nrow(kbdi_data) / 365.25) - 1
+  number_of_years <- length(unique(kbdi_data$year)) - 1
 
   # Check if the number of rows in the drought_features_table matches the number of years
   if (nrow(drought_features_table) != number_of_years) {
