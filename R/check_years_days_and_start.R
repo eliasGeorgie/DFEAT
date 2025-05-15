@@ -43,8 +43,8 @@ check_years_days_and_start <- function(data) {
 
   # Count the number of distinct days per year
   year_counts <- data |>
-    group_by(year) |>
-    summarize(days = n_distinct(paste(month, day, sep = "-")))
+    dplyr::group_by(year) |>
+    dplyr::summarize(days = dplyr::n_distinct(paste(month, day, sep = "-")))
 
   # Check if all years have 365 or 366 days
   if (all(year_counts$days == 365
@@ -58,7 +58,7 @@ check_years_days_and_start <- function(data) {
     warning("Some years do not have 365 or 366 days")
     # Identify years that are not fully present (not 365 or 366 days)
     incomplete_years <- year_counts |>
-      filter(!(days == 365
+      dplyr::filter(!(days == 365
                | (days == 366
                   & year %% 4 == 0
                   & year %% 100 != 0)
@@ -71,8 +71,8 @@ check_years_days_and_start <- function(data) {
 
   # Check if each year starts on January 1st
   year_starts_jan_first <- data |>
-    group_by(year) |>
-    summarize(jan_first = sum(as.numeric(month == 1) & as.numeric(day == 1)))
+    dplyr::group_by(year) |>
+    dplyr::summarize(jan_first = sum(as.numeric(month == 1) & as.numeric(day == 1)))
 
   if (all(year_starts_jan_first$jan_first == 1)) {
     message("All years start on January 1st")
