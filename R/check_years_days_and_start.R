@@ -81,7 +81,7 @@ check_years_days_and_start <- function(data) {
 
     # Identify years that do not start on January 1st
     non_jan_first_years <- year_starts_jan_first |>
-      filter(jan_first == 0)
+      dplyr::filter(jan_first == 0)
 
     # Output years that do not start on January 1st
     warning("The following years do not start on January 1st:")
