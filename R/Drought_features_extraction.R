@@ -135,10 +135,10 @@ Drought_features_extraction <- function(kbdi_data, minDmax, drought_features_tab
     fit_period = length(tab_moisture_year)
 
     # fine curve fitting based on the length of tab_moisture_year
-    fit <- curvefit(tab_moisture_year, seq(1, fit_period, 1), seq(1, fit_period, 1), methods = M )
+    fit <- phenofit::curvefit(tab_moisture_year, seq(1, fit_period, 1), seq(1, fit_period, 1), methods = M )
 
     # get yearly vegetation phenological metrics of the fitted curve
-    l_pheno <- get_pheno(fit, M, IsPlot = FALSE)
+    l_pheno <- phenofit::get_pheno(fit, M, IsPlot = FALSE)
 
     # extract the 7 parameters of Elmore Equation
     mn <- fit$model$Elmore$par[1]
@@ -289,7 +289,7 @@ Drought_features_extraction <- function(kbdi_data, minDmax, drought_features_tab
 
       fitperiod_original = length(new_tabmoisture)
 
-      fit1 <- curvefit(new_tabmoisture, seq(1, fitperiod_original, 1), seq(1, fitperiod_original, 1), methods = M )
+      fit1 <- phenofit::curvefit(new_tabmoisture, seq(1, fitperiod_original, 1), seq(1, fitperiod_original, 1), methods = M )
       mn1 <- fit1$model$Elmore$par[1]
       mx1 <- fit1$model$Elmore$par[2]
       sos1 <- fit1$model$Elmore$par[3]
@@ -330,7 +330,7 @@ Drought_features_extraction <- function(kbdi_data, minDmax, drought_features_tab
       }
 
       fitperiod_original=length(new_tabmoisture)
-      fit2<-curvefit(new_tabmoisture, seq(1,fitperiod_original,1), seq(1,fitperiod_original,1), methods= M )
+      fit2<- phenofit::curvefit(new_tabmoisture, seq(1,fitperiod_original,1), seq(1,fitperiod_original,1), methods= M )
       mn2<-fit2$model$Elmore$par[1]
       mx2<-fit2$model$Elmore$par[2]
       sos2<-fit2$model$Elmore$par[3]

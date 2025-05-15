@@ -50,12 +50,12 @@ identify_peak_drought_days <- function(kbdi_data) {
 
   # Count the number of days for each year
   year_counts <- kbdi_data %>%
-    group_by(year) %>%
-    summarize(days = n_distinct(paste(month, day, sep = "-")))
+    dplyr::group_by(year) %>%
+    dplyr::summarize(days =  dplyr::n_distinct(paste(month, day, sep = "-")))
 
   # Check if any years are missing days (not fully present)
   incomplete_years <- year_counts %>%
-    filter(!(days == 365 | (days == 366 & year %% 4 == 0 & year %% 100 != 0) | (days == 366 & year %% 400 == 0)))
+    dplyr::filter(!(days == 365 | (days == 366 & year %% 4 == 0 & year %% 100 != 0) | (days == 366 & year %% 400 == 0)))
 
   # If incomplete years are found, print a message
   if (nrow(incomplete_years) > 0) {
@@ -71,9 +71,9 @@ identify_peak_drought_days <- function(kbdi_data) {
 
   # Additional check: Look for NA values in KBDI column for each year
   na_years <- kbdi_data %>%
-    group_by(year) %>%
-    summarize(na_count = sum(is.na(KBDI))) %>%
-    filter(na_count > 0)
+    dplyr::group_by(year) %>%
+    dplyr::summarize(na_count = sum(is.na(KBDI))) %>%
+    dplyr::filter(na_count > 0)
 
   # If NA values are found, print a message and stop the function
   if (nrow(na_years) > 0) {
